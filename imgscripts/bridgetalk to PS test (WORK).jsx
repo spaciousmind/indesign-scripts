@@ -29,10 +29,9 @@ $.writeln("myLinkcurrentFolder  = " +myLinkcurrentFolder );
 function ResaveInPS(imagePath, myLinkName) {
 		app.displayDialogs = DialogModes.NO;
 		var psDoc;
-		var NEWPATH = imagePath.replace(/(^.*)(\u00BB.)/, "WIP:» ");
+		var imagePath = imagePath.replace(/(^.*)(\u00BB.)/, "WIP:» ");
 
 	$.writeln("imagePath = " + imagePath);
-	$.writeln("NEWPATH = " + NEWPATH);
 	$.writeln("myLinkName = " + myLinkName);
 
 psDoc = app.open(new File(NEWPATH));
