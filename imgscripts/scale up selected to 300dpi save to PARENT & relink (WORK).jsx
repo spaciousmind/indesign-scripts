@@ -20,7 +20,11 @@ if (ppiH == ppiV) {
 		var scalePercentageRounded = Math.round(scalePercentage);
 		$.writeln("scalePercentage = " + scalePercentage);
 		$.writeln("scalePercentageRounded = " + scalePercentageRounded);
-				var theFile = File(myLinkCurrentFolder + "\\" + myLinkName + '_upscaled_' + Math.round(scalePercentage) + '-pct.jpg');
+				var theFilepre = myLinkCurrentFolder +  myLinkName + '_upscaled_' + Math.round(scalePercentage) + '-pct.jpg';
+				var theFile = File(myLinkCurrentFolder + myLinkName + '_upscaled_' + Math.round(scalePercentage) + '-pct.jpg');
+				$.writeln("theFilepre = " +theFilepre);
+				$.writeln("theFile = " +theFile);
+
 		CreateBridgeTalkMessage(myLinkfp, myLinkName, scalePercentage);
 	} else {
 		alert("PPI higher than 300 already");
